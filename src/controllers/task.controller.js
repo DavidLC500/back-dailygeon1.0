@@ -9,6 +9,7 @@ import Character from '../models/Character.js';
 import asyncHandler from '../utils/asyncHandler.js';
 import ApiError from '../utils/ApiError.js';
 import { getXPReward, calculateLevelUp } from '../utils/xp.js';
+import { applyDamage } from '../services/boss.service.js';
 
 /** GET /api/tasks — lista las misiones del usuario (mas recientes primero) */
 export const getTasks = asyncHandler(async (req, res) => {
@@ -77,5 +78,15 @@ export const completeTask = asyncHandler(async (req, res) => {
     levelUp = result.leveledUp ? { levelsGained: result.levelsGained, newLevel: result.newLevel } : null;
   }
 
-  res.json({ task, xpGained: task.xpReward, levelUp });
+  // Aplica dano al jefe semanal (la XP de la mision es el dano)
+  const bossResult = await applyDamage(req.userId, task.xpReward);
+
+  res.json({
+    task,
+    xpGained: task.xpReward,
+    levelUp,
+    bossDamage: bossResult
+      ? { damage: task.xpReward, currentHP: bossResult.run.currentHP, defeated: bossResult.defeated }
+      : null,
+  });
 });

@@ -1,12 +1,13 @@
 /**
  * boss.controller.js
- * Catalogo de jefes y la run semanal del usuario autenticado.
+ * Catalogo de jefes y la run semanal del usuario (se crea automaticamente
+ * la primera vez que se consulta cada semana) mas el historial.
  */
 
 import Boss from '../models/Boss.js';
 import BossRun from '../models/BossRun.js';
 import asyncHandler from '../utils/asyncHandler.js';
-import ApiError from '../utils/ApiError.js';
+import { getOrCreateWeeklyRun } from '../services/boss.service.js';
 
 /** GET /api/bosses — devuelve el catalogo de jefes por dificultad */
 export const getBosses = asyncHandler(async (req, res) => {
@@ -14,11 +15,18 @@ export const getBosses = asyncHandler(async (req, res) => {
   res.json({ bosses });
 });
 
-/** GET /api/bosses/my-run — devuelve la run mas reciente del usuario */
+/** GET /api/bosses/my-run — run de la semana actual (la crea si no existe) */
 export const getMyRun = asyncHandler(async (req, res) => {
-  const run = await BossRun.findOne({ user: req.userId })
-    .sort({ weekStartDate: -1 })
-    .populate('boss');
-  if (!run) throw new ApiError(404, 'No hay run de jefe para este usuario', 'RUN_NOT_FOUND');
+  const run = await getOrCreateWeeklyRun(req.userId);
   res.json({ run });
+});
+
+/** GET /api/bosses/history — runs anteriores del usuario (excluye la actual) */
+export const getHistory = asyncHandler(async (req, res) => {
+  const current = await getOrCreateWeeklyRun(req.userId);
+  const history = await BossRun.find({ user: req.userId, _id: { $ne: current._id } })
+    .sort({ weekStartDate: -1 })
+    .limit(10)
+    .populate('boss');
+  res.json({ history });
 });

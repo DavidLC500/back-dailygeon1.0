@@ -1,0 +1,19 @@
+# Blueprint de despliegue para Render.
+# Crea un Web Service Node a partir de este repositorio.
+services:
+  - type: web
+    name: dailygeon-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      # Rellenar estos valores en el panel de Render (no se versionan)
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CLIENT_URL
+        sync: false
+      - key: JWT_EXPIRES_IN
+        value: 7d

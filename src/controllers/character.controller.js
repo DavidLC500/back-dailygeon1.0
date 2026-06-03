@@ -17,13 +17,20 @@ export const createCharacter = asyncHandler(async (req, res) => {
   const { name, class: charClass, avatarColor } = req.body;
   if (!name || !charClass) throw new ApiError(400, 'name y class son obligatorios', 'MISSING_FIELDS');
 
-  const character = await Character.create({
-    user: req.userId,
-    name,
-    class: charClass,
-    avatarColor,
-    maxXP: getXPForLevel(1),
-  });
+  let character;
+  try {
+    character = await Character.create({
+      user: req.userId,
+      name,
+      class: charClass,
+      avatarColor,
+      maxXP: getXPForLevel(1),
+    });
+  } catch (err) {
+    // Si una peticion concurrente ya lo creo (indice unico), no duplicamos
+    if (err.code === 11000) throw new ApiError(409, 'El usuario ya tiene un personaje', 'CHARACTER_EXISTS');
+    throw err;
+  }
   // Enlaza el personaje con su usuario (relacion 1-1)
   await User.findByIdAndUpdate(req.userId, { character: character._id });
 

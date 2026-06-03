@@ -50,4 +50,7 @@ const characterSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Un usuario solo puede tener un personaje (evita duplicados por carrera)
+characterSchema.index({ user: 1 }, { unique: true });
+
 export default mongoose.model('Character', characterSchema);

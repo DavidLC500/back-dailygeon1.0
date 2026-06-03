@@ -33,15 +33,23 @@ export const getOrCreateWeeklyRun = async (userId) => {
   const seed = weekStartDate.split('-').reduce((acc, part) => acc + Number(part), 0);
   const boss = bosses[seed % bosses.length];
 
-  const run = await BossRun.create({
-    user: userId,
-    boss: boss._id,
-    weekStartDate,
-    currentHP: boss.maxHP,
-    maxHP: boss.maxHP,
-    status: 'active',
-  });
-  return run.populate('boss');
+  try {
+    const run = await BossRun.create({
+      user: userId,
+      boss: boss._id,
+      weekStartDate,
+      currentHP: boss.maxHP,
+      maxHP: boss.maxHP,
+      status: 'active',
+    });
+    return run.populate('boss');
+  } catch (err) {
+    // Si otra peticion concurrente ya creo la run (indice unico), la reusamos
+    if (err.code === 11000) {
+      return BossRun.findOne({ user: userId, weekStartDate }).populate('boss');
+    }
+    throw err;
+  }
 };
 
 /**

@@ -7,7 +7,7 @@
 import Boss from '../models/Boss.js';
 import BossRun from '../models/BossRun.js';
 import asyncHandler from '../utils/asyncHandler.js';
-import { getOrCreateWeeklyRun } from '../services/boss.service.js';
+import { getOrCreateWeeklyRun, getWeekStart } from '../services/boss.service.js';
 
 /** GET /api/bosses — devuelve el catalogo de jefes por dificultad */
 export const getBosses = asyncHandler(async (req, res) => {
@@ -21,10 +21,12 @@ export const getMyRun = asyncHandler(async (req, res) => {
   res.json({ run });
 });
 
-/** GET /api/bosses/history — runs anteriores del usuario (excluye la actual) */
+/** GET /api/bosses/history — runs de semanas anteriores (excluye la actual) */
 export const getHistory = asyncHandler(async (req, res) => {
-  const current = await getOrCreateWeeklyRun(req.userId);
-  const history = await BossRun.find({ user: req.userId, _id: { $ne: current._id } })
+  const history = await BossRun.find({
+    user: req.userId,
+    weekStartDate: { $ne: getWeekStart() },
+  })
     .sort({ weekStartDate: -1 })
     .limit(10)
     .populate('boss');

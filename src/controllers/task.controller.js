@@ -19,7 +19,7 @@ export const getTasks = asyncHandler(async (req, res) => {
 /** POST /api/tasks — crea una mision; la XP se deriva de la dificultad */
 export const createTask = asyncHandler(async (req, res) => {
   const { title, dueDate, difficulty = 'normal' } = req.body;
-  if (!title || !dueDate) throw new ApiError(400, 'title y dueDate son obligatorios');
+  if (!title || !dueDate) throw new ApiError(400, 'title y dueDate son obligatorios', 'MISSING_FIELDS');
 
   const task = await Task.create({
     ...req.body,
@@ -38,22 +38,22 @@ export const updateTask = asyncHandler(async (req, res) => {
     updates,
     { new: true, runValidators: true }
   );
-  if (!task) throw new ApiError(404, 'Mision no encontrada');
+  if (!task) throw new ApiError(404, 'Mision no encontrada', 'TASK_NOT_FOUND');
   res.json({ task });
 });
 
 /** DELETE /api/tasks/:id — elimina una mision propia */
 export const deleteTask = asyncHandler(async (req, res) => {
   const task = await Task.findOneAndDelete({ _id: req.params.id, user: req.userId });
-  if (!task) throw new ApiError(404, 'Mision no encontrada');
+  if (!task) throw new ApiError(404, 'Mision no encontrada', 'TASK_NOT_FOUND');
   res.json({ message: 'Mision eliminada' });
 });
 
 /** POST /api/tasks/:id/complete — completa la mision y otorga XP al personaje */
 export const completeTask = asyncHandler(async (req, res) => {
   const task = await Task.findOne({ _id: req.params.id, user: req.userId });
-  if (!task) throw new ApiError(404, 'Mision no encontrada');
-  if (task.completed) throw new ApiError(400, 'La mision ya estaba completada');
+  if (!task) throw new ApiError(404, 'Mision no encontrada', 'TASK_NOT_FOUND');
+  if (task.completed) throw new ApiError(400, 'La mision ya estaba completada', 'TASK_ALREADY_COMPLETED');
 
   task.completed = true;
   task.completedDate = new Date();

@@ -19,6 +19,6 @@ export const getMyRun = asyncHandler(async (req, res) => {
   const run = await BossRun.findOne({ user: req.userId })
     .sort({ weekStartDate: -1 })
     .populate('boss');
-  if (!run) throw new ApiError(404, 'No hay run de jefe para este usuario');
+  if (!run) throw new ApiError(404, 'No hay run de jefe para este usuario', 'RUN_NOT_FOUND');
   res.json({ run });
 });

@@ -12,10 +12,10 @@ import { getXPForLevel } from '../utils/xp.js';
 /** POST /api/characters — crea el personaje del usuario (uno por usuario) */
 export const createCharacter = asyncHandler(async (req, res) => {
   const existing = await Character.findOne({ user: req.userId });
-  if (existing) throw new ApiError(409, 'El usuario ya tiene un personaje');
+  if (existing) throw new ApiError(409, 'El usuario ya tiene un personaje', 'CHARACTER_EXISTS');
 
   const { name, class: charClass, avatarColor } = req.body;
-  if (!name || !charClass) throw new ApiError(400, 'name y class son obligatorios');
+  if (!name || !charClass) throw new ApiError(400, 'name y class son obligatorios', 'MISSING_FIELDS');
 
   const character = await Character.create({
     user: req.userId,
@@ -33,7 +33,7 @@ export const createCharacter = asyncHandler(async (req, res) => {
 /** GET /api/characters/me — devuelve el personaje del usuario */
 export const getMyCharacter = asyncHandler(async (req, res) => {
   const character = await Character.findOne({ user: req.userId });
-  if (!character) throw new ApiError(404, 'Personaje no encontrado');
+  if (!character) throw new ApiError(404, 'Personaje no encontrado', 'CHARACTER_NOT_FOUND');
   res.json({ character });
 });
 
@@ -45,6 +45,6 @@ export const updateMyCharacter = asyncHandler(async (req, res) => {
     { ...(name && { name }), ...(avatarColor && { avatarColor }) },
     { new: true, runValidators: true }
   );
-  if (!character) throw new ApiError(404, 'Personaje no encontrado');
+  if (!character) throw new ApiError(404, 'Personaje no encontrado', 'CHARACTER_NOT_FOUND');
   res.json({ character });
 });

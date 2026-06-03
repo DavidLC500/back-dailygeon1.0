@@ -13,7 +13,7 @@ const protect = (req, res, next) => {
   const token = header.startsWith('Bearer ') ? header.slice(7) : null;
 
   if (!token) {
-    return next(new ApiError(401, 'No autorizado: falta el token'));
+    return next(new ApiError(401, 'No autorizado: falta el token', 'NO_TOKEN'));
   }
 
   try {
@@ -21,7 +21,7 @@ const protect = (req, res, next) => {
     req.userId = payload.id;
     next();
   } catch {
-    next(new ApiError(401, 'No autorizado: token invalido o expirado'));
+    next(new ApiError(401, 'No autorizado: token invalido o expirado', 'INVALID_TOKEN'));
   }
 };
 

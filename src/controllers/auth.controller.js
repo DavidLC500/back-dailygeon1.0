@@ -13,7 +13,7 @@ import { signToken } from '../utils/token.js';
 export const register = asyncHandler(async (req, res) => {
   const { username, email, password } = req.body;
   if (!username || !email || !password) {
-    throw new ApiError(400, 'username, email y password son obligatorios');
+    throw new ApiError(400, 'username, email y password son obligatorios', 'MISSING_FIELDS');
   }
 
   const user = await User.create({ username, email, password });
@@ -24,12 +24,12 @@ export const register = asyncHandler(async (req, res) => {
 export const login = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
-    throw new ApiError(400, 'email y password son obligatorios');
+    throw new ApiError(400, 'email y password son obligatorios', 'MISSING_FIELDS');
   }
 
   const user = await User.findOne({ email: email.toLowerCase() });
   if (!user || !(await user.comparePassword(password))) {
-    throw new ApiError(401, 'Credenciales incorrectas');
+    throw new ApiError(401, 'Credenciales incorrectas', 'INVALID_CREDENTIALS');
   }
 
   res.json({ token: signToken(user._id), user });
@@ -38,6 +38,6 @@ export const login = asyncHandler(async (req, res) => {
 /** GET /api/auth/me — devuelve el usuario autenticado con su personaje */
 export const me = asyncHandler(async (req, res) => {
   const user = await User.findById(req.userId).populate('character');
-  if (!user) throw new ApiError(404, 'Usuario no encontrado');
+  if (!user) throw new ApiError(404, 'Usuario no encontrado', 'USER_NOT_FOUND');
   res.json({ user });
 });

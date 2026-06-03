@@ -1,14 +1,17 @@
 /**
  * ApiError.js
- * Error con codigo de estado HTTP. Permite lanzar errores controlados
- * desde los controladores (ej. throw new ApiError(404, 'No encontrado'))
- * que el errorHandler convierte en una respuesta JSON coherente.
+ * Error con codigo de estado HTTP y un codigo de error estable.
+ * El `code` (ej. 'INVALID_CREDENTIALS') permite que el frontend traduzca
+ * el mensaje segun el idioma, sin depender del texto del backend.
+ *
+ * Uso: throw new ApiError(401, 'Credenciales incorrectas', 'INVALID_CREDENTIALS')
  */
 
 class ApiError extends Error {
-  constructor(status, message) {
+  constructor(status, message, code = 'ERROR') {
     super(message);
     this.status = status;
+    this.code = code;
     this.name = 'ApiError';
   }
 }

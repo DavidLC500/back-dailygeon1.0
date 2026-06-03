@@ -1,0 +1,16 @@
+userEmail,bossSlug,weekStartDate,currentHP,maxHP,status
+aria@dailygeon.com,goblin-procrastinador,2026-06-03,220,300,active
+bran@dailygeon.com,slime-del-desorden,2026-06-03,347,450,active
+bran@dailygeon.com,espectro-del-cansancio,2026-05-27,0,600,defeated
+cira@dailygeon.com,espectro-del-cansancio,2026-06-03,214,600,active
+dorian@dailygeon.com,golem-de-la-rutina,2026-06-03,183,800,active
+dorian@dailygeon.com,dragon-de-la-distraccion,2026-05-27,0,1000,defeated
+elwin@dailygeon.com,dragon-de-la-distraccion,2026-06-03,343,1000,active
+fenna@dailygeon.com,lich-del-aplazamiento,2026-06-03,424,1300,active
+fenna@dailygeon.com,titan-del-agobio,2026-05-27,0,1600,defeated
+goran@dailygeon.com,titan-del-agobio,2026-06-03,1083,1600,active
+hilda@dailygeon.com,sombra-final,2026-06-03,1617,2000,active
+hilda@dailygeon.com,goblin-procrastinador,2026-05-27,0,300,expired
+ivar@dailygeon.com,goblin-procrastinador,2026-06-03,257,300,active
+jora@dailygeon.com,slime-del-desorden,2026-06-03,248,450,active
+jora@dailygeon.com,espectro-del-cansancio,2026-05-27,0,600,defeated

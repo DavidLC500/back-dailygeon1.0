@@ -1,0 +1,137 @@
+userEmail,title,description,priority,category,difficulty,dueDate,completed,completedDate,xpReward,isDaily
+aria@dailygeon.com,Planificar sprint,,low,work,easy,2026-06-12,TRUE,2026-05-31,10,FALSE
+aria@dailygeon.com,Paseo de 30 min,,critical,health,easy,2026-06-06,TRUE,2026-05-29,10,FALSE
+aria@dailygeon.com,Preparar la demo,,low,work,normal,2026-06-08,TRUE,2026-05-29,20,FALSE
+aria@dailygeon.com,Llamar a la familia,,medium,general,legendary,2026-05-28,FALSE,,100,FALSE
+aria@dailygeon.com,Cocinar sano,,low,health,legendary,2026-06-16,TRUE,2026-05-31,100,FALSE
+aria@dailygeon.com,Hacer la compra,,low,general,legendary,2026-06-13,FALSE,,100,FALSE
+aria@dailygeon.com,Curso de Node,,high,learning,easy,2026-06-13,TRUE,2026-06-01,10,FALSE
+aria@dailygeon.com,Leer 20 paginas,,medium,learning,easy,2026-06-13,FALSE,,10,FALSE
+aria@dailygeon.com,Curso de Node,,low,learning,easy,2026-05-31,FALSE,,10,FALSE
+aria@dailygeon.com,Beber 2L de agua,,low,health,legendary,2026-06-09,FALSE,,100,FALSE
+aria@dailygeon.com,Repasar apuntes,,high,learning,normal,2026-05-30,FALSE,,20,TRUE
+aria@dailygeon.com,Cerrar el informe,,low,work,legendary,2026-06-07,FALSE,,100,TRUE
+bran@dailygeon.com,Revisar emails,,medium,work,normal,2026-06-02,TRUE,2026-06-03,20,TRUE
+bran@dailygeon.com,Revisar emails,,critical,work,easy,2026-05-28,FALSE,,10,TRUE
+bran@dailygeon.com,Estiramientos,,low,fitness,normal,2026-05-29,TRUE,2026-06-03,20,TRUE
+bran@dailygeon.com,Curso de Node,,medium,learning,legendary,2026-06-03,TRUE,2026-05-30,100,FALSE
+bran@dailygeon.com,Estiramientos,,medium,fitness,easy,2026-06-02,FALSE,,10,FALSE
+bran@dailygeon.com,Cerrar el informe,,low,work,hard,2026-05-30,FALSE,,50,FALSE
+bran@dailygeon.com,Practicar ingles,,low,learning,legendary,2026-06-14,FALSE,,100,TRUE
+bran@dailygeon.com,Repasar apuntes,,critical,learning,easy,2026-06-05,FALSE,,10,FALSE
+bran@dailygeon.com,Curso de Node,,medium,learning,hard,2026-06-03,FALSE,,50,FALSE
+bran@dailygeon.com,Preparar la demo,,medium,work,easy,2026-06-11,FALSE,,10,FALSE
+bran@dailygeon.com,Estudiar React 1h,,medium,learning,easy,2026-06-16,FALSE,,10,FALSE
+bran@dailygeon.com,Cocinar sano,,high,health,legendary,2026-06-11,FALSE,,100,TRUE
+bran@dailygeon.com,Revisar emails,,high,work,normal,2026-05-31,TRUE,2026-06-01,20,TRUE
+cira@dailygeon.com,Practicar ingles,,medium,learning,legendary,2026-06-10,FALSE,,100,FALSE
+cira@dailygeon.com,Practicar ingles,,critical,learning,legendary,2026-06-12,FALSE,,100,FALSE
+cira@dailygeon.com,Repasar apuntes,,medium,learning,hard,2026-05-30,FALSE,,50,FALSE
+cira@dailygeon.com,Meditar 10 min,,critical,health,easy,2026-06-16,FALSE,,10,TRUE
+cira@dailygeon.com,Curso de Node,,medium,learning,normal,2026-06-03,FALSE,,20,FALSE
+cira@dailygeon.com,Rutina de fuerza,,critical,fitness,legendary,2026-05-27,FALSE,,100,FALSE
+cira@dailygeon.com,Reunion de equipo,,low,work,legendary,2026-06-10,TRUE,2026-05-31,100,FALSE
+cira@dailygeon.com,Preparar la demo,,high,work,normal,2026-06-14,FALSE,,20,FALSE
+cira@dailygeon.com,Repasar apuntes,,critical,learning,legendary,2026-05-30,TRUE,2026-05-28,100,FALSE
+cira@dailygeon.com,Ordenar el cuarto,,critical,general,legendary,2026-05-28,TRUE,2026-05-31,100,TRUE
+cira@dailygeon.com,Paseo de 30 min,,high,health,legendary,2026-05-30,TRUE,2026-05-30,100,FALSE
+cira@dailygeon.com,Planificar sprint,,medium,work,easy,2026-05-29,TRUE,2026-05-28,10,FALSE
+cira@dailygeon.com,Correr 5km,,medium,fitness,legendary,2026-06-08,FALSE,,100,FALSE
+cira@dailygeon.com,Rutina de fuerza,,critical,fitness,hard,2026-06-02,TRUE,2026-05-31,50,FALSE
+cira@dailygeon.com,Repasar apuntes,,low,learning,hard,2026-06-02,TRUE,2026-05-29,50,TRUE
+dorian@dailygeon.com,Ir al gimnasio,,low,fitness,legendary,2026-06-11,FALSE,,100,FALSE
+dorian@dailygeon.com,Cocinar sano,,critical,health,easy,2026-06-03,FALSE,,10,FALSE
+dorian@dailygeon.com,Hacer la compra,,high,general,normal,2026-05-31,FALSE,,20,FALSE
+dorian@dailygeon.com,Meditar 10 min,,high,health,easy,2026-06-11,FALSE,,10,FALSE
+dorian@dailygeon.com,100 flexiones,,high,fitness,legendary,2026-05-29,FALSE,,100,FALSE
+dorian@dailygeon.com,Ir al gimnasio,,high,fitness,hard,2026-05-30,FALSE,,50,FALSE
+dorian@dailygeon.com,Hacer la compra,,high,general,normal,2026-06-15,TRUE,2026-05-31,20,FALSE
+dorian@dailygeon.com,Beber 2L de agua,,low,health,normal,2026-06-13,FALSE,,20,TRUE
+dorian@dailygeon.com,Dormir 8 horas,,critical,health,hard,2026-06-08,TRUE,2026-05-31,50,FALSE
+dorian@dailygeon.com,Cocinar sano,,high,health,easy,2026-05-29,TRUE,2026-06-02,10,FALSE
+dorian@dailygeon.com,Dormir 8 horas,,medium,health,easy,2026-06-16,TRUE,2026-05-31,10,FALSE
+dorian@dailygeon.com,Llamar a la familia,,critical,general,hard,2026-06-14,FALSE,,50,FALSE
+dorian@dailygeon.com,Beber 2L de agua,,critical,health,legendary,2026-06-16,TRUE,2026-05-28,100,TRUE
+elwin@dailygeon.com,Revisar emails,,medium,work,legendary,2026-05-31,TRUE,2026-05-30,100,FALSE
+elwin@dailygeon.com,Correr 5km,,medium,fitness,normal,2026-06-07,FALSE,,20,TRUE
+elwin@dailygeon.com,Planificar sprint,,critical,work,hard,2026-06-15,TRUE,2026-05-30,50,FALSE
+elwin@dailygeon.com,Hacer la compra,,medium,general,normal,2026-06-14,FALSE,,20,FALSE
+elwin@dailygeon.com,Dormir 8 horas,,low,health,legendary,2026-06-07,FALSE,,100,FALSE
+elwin@dailygeon.com,Repasar apuntes,,low,learning,normal,2026-06-09,FALSE,,20,FALSE
+elwin@dailygeon.com,Paseo de 30 min,,critical,health,hard,2026-06-09,TRUE,2026-06-03,50,FALSE
+elwin@dailygeon.com,Dormir 8 horas,,medium,health,hard,2026-06-08,FALSE,,50,TRUE
+elwin@dailygeon.com,Leer 20 paginas,,high,learning,easy,2026-05-29,FALSE,,10,FALSE
+elwin@dailygeon.com,Regar las plantas,,high,general,legendary,2026-06-02,FALSE,,100,FALSE
+elwin@dailygeon.com,Repasar apuntes,,critical,learning,easy,2026-06-07,FALSE,,10,FALSE
+elwin@dailygeon.com,Estiramientos,,medium,fitness,hard,2026-06-13,TRUE,2026-05-30,50,FALSE
+elwin@dailygeon.com,Cocinar sano,,critical,health,legendary,2026-06-03,FALSE,,100,TRUE
+fenna@dailygeon.com,Paseo de 30 min,,medium,health,hard,2026-05-29,FALSE,,50,TRUE
+fenna@dailygeon.com,Practicar ingles,,high,learning,legendary,2026-06-05,FALSE,,100,FALSE
+fenna@dailygeon.com,Rutina de fuerza,,low,fitness,easy,2026-06-13,FALSE,,10,TRUE
+fenna@dailygeon.com,Ordenar el cuarto,,critical,general,legendary,2026-05-30,TRUE,2026-05-29,100,FALSE
+fenna@dailygeon.com,Regar las plantas,,high,general,legendary,2026-06-14,FALSE,,100,FALSE
+fenna@dailygeon.com,Dormir 8 horas,,critical,health,normal,2026-06-14,FALSE,,20,FALSE
+fenna@dailygeon.com,Llamar a la familia,,low,general,easy,2026-06-08,TRUE,2026-05-30,10,FALSE
+fenna@dailygeon.com,Correr 5km,,high,fitness,normal,2026-05-27,FALSE,,20,TRUE
+fenna@dailygeon.com,Beber 2L de agua,,low,health,easy,2026-06-14,FALSE,,10,FALSE
+fenna@dailygeon.com,Estiramientos,,critical,fitness,legendary,2026-05-29,FALSE,,100,FALSE
+fenna@dailygeon.com,Dormir 8 horas,,low,health,legendary,2026-06-16,FALSE,,100,TRUE
+fenna@dailygeon.com,Dormir 8 horas,,low,health,easy,2026-06-07,TRUE,2026-05-29,10,FALSE
+fenna@dailygeon.com,Repasar apuntes,,medium,learning,hard,2026-06-10,FALSE,,50,TRUE
+fenna@dailygeon.com,Estudiar React 1h,,medium,learning,normal,2026-05-27,FALSE,,20,FALSE
+goran@dailygeon.com,Planificar sprint,,low,work,legendary,2026-05-27,TRUE,2026-06-02,100,FALSE
+goran@dailygeon.com,Rutina de fuerza,,high,fitness,normal,2026-06-12,FALSE,,20,FALSE
+goran@dailygeon.com,Practicar ingles,,medium,learning,hard,2026-06-16,TRUE,2026-05-28,50,FALSE
+goran@dailygeon.com,Cerrar el informe,,medium,work,legendary,2026-06-04,FALSE,,100,FALSE
+goran@dailygeon.com,Llamar a la familia,,critical,general,legendary,2026-06-05,TRUE,2026-06-02,100,FALSE
+goran@dailygeon.com,Correr 5km,,high,fitness,normal,2026-06-04,FALSE,,20,TRUE
+goran@dailygeon.com,Llamar a la familia,,medium,general,normal,2026-05-28,TRUE,2026-06-02,20,FALSE
+goran@dailygeon.com,Estiramientos,,medium,fitness,legendary,2026-06-15,FALSE,,100,FALSE
+goran@dailygeon.com,Curso de Node,,high,learning,easy,2026-06-07,TRUE,2026-06-03,10,FALSE
+goran@dailygeon.com,Llamar a la familia,,critical,general,legendary,2026-06-07,FALSE,,100,FALSE
+goran@dailygeon.com,Regar las plantas,,low,general,easy,2026-05-31,TRUE,2026-05-29,10,TRUE
+goran@dailygeon.com,Rutina de fuerza,,low,fitness,normal,2026-06-06,FALSE,,20,FALSE
+goran@dailygeon.com,Regar las plantas,,high,general,hard,2026-06-10,TRUE,2026-06-01,50,FALSE
+hilda@dailygeon.com,Beber 2L de agua,,medium,health,legendary,2026-06-02,FALSE,,100,TRUE
+hilda@dailygeon.com,Meditar 10 min,,high,health,legendary,2026-06-03,TRUE,2026-05-28,100,FALSE
+hilda@dailygeon.com,Ir al gimnasio,,medium,fitness,easy,2026-06-14,TRUE,2026-05-28,10,FALSE
+hilda@dailygeon.com,Curso de Node,,medium,learning,hard,2026-06-08,TRUE,2026-05-30,50,FALSE
+hilda@dailygeon.com,Pagar facturas,,critical,general,hard,2026-06-14,FALSE,,50,FALSE
+hilda@dailygeon.com,Meditar 10 min,,medium,health,normal,2026-06-16,FALSE,,20,FALSE
+hilda@dailygeon.com,Correr 5km,,high,fitness,legendary,2026-05-29,FALSE,,100,FALSE
+hilda@dailygeon.com,Llamar a la familia,,critical,general,easy,2026-06-09,TRUE,2026-05-31,10,FALSE
+hilda@dailygeon.com,Preparar la demo,,critical,work,hard,2026-06-06,FALSE,,50,FALSE
+hilda@dailygeon.com,Ir al gimnasio,,medium,fitness,legendary,2026-06-13,TRUE,2026-05-31,100,FALSE
+hilda@dailygeon.com,Hacer la compra,,high,general,easy,2026-06-09,TRUE,2026-06-03,10,TRUE
+hilda@dailygeon.com,Paseo de 30 min,,low,health,legendary,2026-05-28,FALSE,,100,TRUE
+hilda@dailygeon.com,Correr 5km,,medium,fitness,easy,2026-06-10,FALSE,,10,FALSE
+ivar@dailygeon.com,Planificar sprint,,critical,work,easy,2026-06-07,FALSE,,10,FALSE
+ivar@dailygeon.com,Dormir 8 horas,,medium,health,legendary,2026-06-02,FALSE,,100,TRUE
+ivar@dailygeon.com,Repasar apuntes,,low,learning,easy,2026-05-30,FALSE,,10,FALSE
+ivar@dailygeon.com,Pagar facturas,,high,general,easy,2026-06-13,FALSE,,10,FALSE
+ivar@dailygeon.com,Reunion de equipo,,high,work,legendary,2026-06-16,FALSE,,100,FALSE
+ivar@dailygeon.com,Estiramientos,,high,fitness,easy,2026-05-30,FALSE,,10,FALSE
+ivar@dailygeon.com,Rutina de fuerza,,critical,fitness,legendary,2026-06-08,FALSE,,100,FALSE
+ivar@dailygeon.com,Pagar facturas,,low,general,normal,2026-06-12,TRUE,2026-05-31,20,FALSE
+ivar@dailygeon.com,100 flexiones,,high,fitness,normal,2026-06-02,TRUE,2026-05-30,20,FALSE
+ivar@dailygeon.com,Rutina de fuerza,,high,fitness,normal,2026-06-02,FALSE,,20,FALSE
+ivar@dailygeon.com,Preparar la demo,,low,work,hard,2026-06-01,TRUE,2026-05-30,50,FALSE
+ivar@dailygeon.com,Regar las plantas,,high,general,normal,2026-06-13,TRUE,2026-06-01,20,FALSE
+ivar@dailygeon.com,Pagar facturas,,medium,general,easy,2026-06-02,FALSE,,10,FALSE
+ivar@dailygeon.com,Revisar emails,,medium,work,hard,2026-06-09,FALSE,,50,FALSE
+ivar@dailygeon.com,Rutina de fuerza,,medium,fitness,hard,2026-06-04,FALSE,,50,FALSE
+jora@dailygeon.com,Hacer la compra,,low,general,normal,2026-06-13,TRUE,2026-05-28,20,FALSE
+jora@dailygeon.com,Cocinar sano,,critical,health,normal,2026-05-28,TRUE,2026-06-02,20,FALSE
+jora@dailygeon.com,Ordenar el cuarto,,low,general,hard,2026-06-16,TRUE,2026-05-30,50,FALSE
+jora@dailygeon.com,Reunion de equipo,,low,work,normal,2026-06-06,TRUE,2026-05-29,20,FALSE
+jora@dailygeon.com,Planificar sprint,,low,work,normal,2026-06-05,FALSE,,20,FALSE
+jora@dailygeon.com,100 flexiones,,medium,fitness,hard,2026-06-02,FALSE,,50,FALSE
+jora@dailygeon.com,Repasar apuntes,,medium,learning,legendary,2026-06-09,TRUE,2026-06-01,100,FALSE
+jora@dailygeon.com,Curso de Node,,low,learning,easy,2026-06-02,TRUE,2026-06-01,10,FALSE
+jora@dailygeon.com,Paseo de 30 min,,low,health,hard,2026-06-11,FALSE,,50,TRUE
+jora@dailygeon.com,Estiramientos,,medium,fitness,legendary,2026-06-01,FALSE,,100,TRUE
+jora@dailygeon.com,Correr 5km,,medium,fitness,hard,2026-06-08,FALSE,,50,FALSE
+jora@dailygeon.com,Cerrar el informe,,medium,work,hard,2026-06-16,FALSE,,50,FALSE
+jora@dailygeon.com,Estudiar React 1h,,medium,learning,legendary,2026-06-12,TRUE,2026-05-28,100,FALSE
+jora@dailygeon.com,Planificar sprint,,critical,work,easy,2026-05-31,FALSE,,10,FALSE
+jora@dailygeon.com,Planificar sprint,,medium,work,normal,2026-06-07,TRUE,2026-05-29,20,FALSE

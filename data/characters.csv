@@ -1,0 +1,11 @@
+userEmail,name,class,level,currentXP,maxXP,health,maxHealth,avatarColor
+aria@dailygeon.com,Aria,rogue,1,4,100,100,100,#7c3aed
+bran@dailygeon.com,Bran,rogue,2,95,130,100,100,#dc2626
+cira@dailygeon.com,Cira,cleric,3,167,169,100,100,#2563eb
+dorian@dailygeon.com,Dorian,cleric,4,92,219,100,100,#059669
+elwin@dailygeon.com,Elwin,mage,5,269,285,100,100,#d97706
+fenna@dailygeon.com,Fenna,mage,6,148,371,100,100,#db2777
+goran@dailygeon.com,Goran,mage,7,430,482,100,100,#7c3aed
+hilda@dailygeon.com,Hilda,mage,8,142,627,100,100,#dc2626
+ivar@dailygeon.com,Ivar,mage,1,4,100,100,100,#2563eb
+jora@dailygeon.com,Jora,mage,2,20,130,100,100,#059669
